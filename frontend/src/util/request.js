@@ -1,11 +1,26 @@
 const SERVER = process.env.REACT_APP_SERVER
 
-const SITEMAP = `${SERVER}/sitemap`
-const ANALYZE = `${SERVER}/analyze`
+export const SITEMAP = `${SERVER}/sitemap`
+export const ANALYZE = `${SERVER}/analyze`
+export const COMPANIES = `${SERVER}/companies`
 
 
-export async function sitemap() {
+export async function sitemap(url) {
     return fetch(SITEMAP, {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify({
+            url: url
+        })
+    }).then(response => {
+        return response.json()
+    })
+}
+
+export async function companies() {
+    return fetch(COMPANIES, {
         method: 'GET', 
         headers: {
           'Content-Type': 'application/json' 
@@ -15,14 +30,14 @@ export async function sitemap() {
     })
 }
 
-export async function analyze() {
+export async function analyze(url) {
     return fetch(ANALYZE, {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json' 
         },
         body: JSON.stringify({
-            url: "example.com"
+            url: url
         })
     }).then(response => {
         return response.json()

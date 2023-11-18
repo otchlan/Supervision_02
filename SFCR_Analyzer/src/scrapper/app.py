@@ -57,4 +57,4 @@ def build_site_map(url, base_url, visited=None):
 
 # Użyj funkcji do przeszukania strony
 base_url = 'https://www.allianz.pl'  # Zmień to na faktyczny URL
-build_site_map(base_url, base_url)
+

@@ -12,7 +12,7 @@ fi
 
 # Instalacja zależności, jeśli jest to potrzebne
 echo "Instalowanie zależności..."
-npm install
+#npm install
 
 # Uruchomienie projektu
 echo "Uruchamianie projektu React..."
