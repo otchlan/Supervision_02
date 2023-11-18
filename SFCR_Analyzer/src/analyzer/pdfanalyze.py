@@ -20,7 +20,6 @@ with pdfplumber.open(file_path) as pdf:
         table_settings = {
             "vertical_strategy": "lines",
             "horizontal_strategy": "lines"
-            # ... add other settings as needed
         }
 
         print(f'Extracting page {pageNumber}')
@@ -38,8 +37,7 @@ merged_tables = []
 i = 0
 while i < len(tables) - 1:
     current_table = tables[i]
-    print(f''
-    )
+    print(f'Current table: {i}')
     # Add your logic here to check if the next table is a continuation
     # For example, check if the headers are the same
     while i + 1 < len(tables) and tables[i + 1].iloc[0].equals(current_table.iloc[0]):
