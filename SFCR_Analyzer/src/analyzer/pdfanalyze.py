@@ -5,7 +5,7 @@ import pandas as pd
 current_dir = os.path.dirname(__file__)  # Gets the directory where the script is located
 src_dir = os.path.dirname(current_dir)  # Moves up to the 'src' directory
 project_dir = os.path.dirname(src_dir)  # Moves up to the main project directory
-file_path = os.path.join(project_dir, 'docs', 'AEGON 2022.pdf')
+file_path = os.path.join(project_dir, 'docs', 'ALLIANZ 2021.pdf')
 
 
 # file_path = "./SFCR_Analyzer/docs/AEGON 2022.pdf"  # Replace with your file path
@@ -18,7 +18,7 @@ with pdfplumber.open(file_path) as pdf:
         pageNumber += 1
 
         table_settings = {
-            "vertical_strategy": "lines",
+            "vertical_strategy": "text",  # or 'explicit' or 'lines'
             "horizontal_strategy": "lines"
         }
 
