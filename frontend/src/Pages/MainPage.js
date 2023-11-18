@@ -17,7 +17,7 @@ const MainPage = ({ children }) => {
     return (
         <div className=" w-full h-full  mx-auto p-4">
             < h1 className="text-3xl font-bold underline">
-                Lynx
+                SFCR Lighter
             </h1>            
             <Companies onCompany={handleOnCompany}></Companies>
             <Output company={company} ></Output>
