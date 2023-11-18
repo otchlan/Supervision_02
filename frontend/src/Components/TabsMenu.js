@@ -1,45 +1,48 @@
 import React, { useState, useEffect } from 'react';
 
 const TabsMenu = ({ components }) => {
-  const [selectedComponent, setSelectedComponent] = useState(() => {
-    const storedComponent = localStorage.getItem('selectedComponent');
-    return storedComponent && components.includes(storedComponent)
-      ? storedComponent
-      : (components[0] || null);
+  const [selectedComponentIndex, setSelectedComponentIndex] = useState(() => {
+    const storedIndex = parseInt(localStorage.getItem('selectedComponentIndex'), 10);
+    return !isNaN(storedIndex) && storedIndex >= 0 && storedIndex < components.length
+      ? storedIndex
+      : 0;
   });
 
   useEffect(() => {
-    localStorage.setItem('selectedComponent', selectedComponent);
-  }, [selectedComponent]);
+    localStorage.setItem('selectedComponentIndex', selectedComponentIndex.toString());
+  }, [selectedComponentIndex]);
 
-  const handleComponentChange = (component) => {
-    setSelectedComponent(() => component);
+  const handleComponentChange = (index) => {
+    setSelectedComponentIndex(index);
   };
+
+  const selectedComponent = components[selectedComponentIndex];
 
   return (
     <div className="flex">
       {/* Menu on the right */}
-      <div style={{ flex: 1, marginRight: '20px' }}>
+      <div className="flex-1 mr-8">
         <h2 className="text-xl font-bold mb-4">Wybierz firmę:</h2>
         <ul className="list-none p-0">
           {components.map((Component, index) => (
             <li
-              key={index}
-              onClick={() => handleComponentChange(Component)}
+              key={Component.id}
+              onClick={() => handleComponentChange(index)}
               className={`cursor-pointer py-2 px-4 mb-2 rounded ${
-                selectedComponent === Component
-                  ? 'bg-blue-500 text-black'
-                  : 'bg-gray-200 text-black'
-              } hover:bg-blue-400`}
+                selectedComponentIndex === index
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-300 text-gray-800'
+              } hover:bg-blue-400 transition-colors duration-300`}
+              style={{ backgroundColor: selectedComponentIndex === index ? '#3182ce' : '#cbd5e0' }}
             >
-              {Component.displayName || Component.name || `Component ${index + 1}`}
+              {Component.displayName || Component.name || `Component ${Component.id}`}
             </li>
           ))}
         </ul>
       </div>
 
       {/* Display selected component on the left */}
-      <div style={{ flex: 2 }}>
+      <div className="flex-2">
         <h2 className="text-xl font-bold mb-4">Selected Component</h2>
         <div className="p-4 border rounded bg-gray-100">
           {selectedComponent && (
