@@ -19,7 +19,7 @@ def print_table(search_text, merged_tables):
 current_dir = os.path.dirname(__file__)  # Gets the directory where the script is located
 src_dir = os.path.dirname(current_dir)  # Moves up to the 'src' directory
 project_dir = os.path.dirname(src_dir)  # Moves up to the main project directory
-file_path = os.path.join(project_dir, 'docs', 'ALLIANZ 2021.pdf')
+file_path = os.path.join(project_dir, 'docs', 'ALLIANZ 2022.pdf')
 
 #file_path = "c:/supervision_source/strona_air.pdf"  # Replace with your file path
 tables = []
