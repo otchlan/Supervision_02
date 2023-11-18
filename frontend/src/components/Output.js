@@ -56,7 +56,7 @@ const Output = ({company}) => {
             }
 
             {output !== null && output.length === 0 &&
-                <Missing text="Nie udało się znaleźć"></Missing>
+                <Missing text="Wygląda na to, że ta firma nie udostępniła swoich sprawozdań "></Missing>
             }
             
         </div>
