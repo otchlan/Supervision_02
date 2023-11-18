@@ -35,9 +35,10 @@ print(f'Tables extracted: {tableNumber}')
 
 merged_tables = []
 i = 0
-while i < len(tables) - 1:
+while i < len(tables) - 2:
     current_table = tables[i]
     print(f'Current table: {i}')
+
     # Add your logic here to check if the next table is a continuation
     # For example, check if the headers are the same
     while i + 1 < len(tables) and tables[i + 1].iloc[0].equals(current_table.iloc[0]):
