@@ -35,17 +35,29 @@ print(f'Tables extracted: {tableNumber}')
 
 merged_tables = []
 i = 0
+
 while i < len(tables) - 2:
     current_table = tables[i]
     print(f'Current table: {i}')
 
+    if current_table.empty:
+        i += 1
+        continue
+
     # Add your logic here to check if the next table is a continuation
     # For example, check if the headers are the same
-    while i + 1 < len(tables) and tables[i + 1].iloc[0].equals(current_table.iloc[0]):
+    while i + 1 < len(tables) and not tables[i].empty and not tables[i+1].empty and tables[i + 1].iloc[0].equals(current_table.iloc[0]):
         # Merge tables
+        print(f'Merging tables {i} and {i+1}')
         current_table = pd.concat([current_table, tables[i + 1][1:]])
         i += 1
+
     merged_tables.append(current_table)
     i += 1
 
 print(f'Tables merged: {len(merged_tables)}')
+
+
+
+
+
