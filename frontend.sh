@@ -16,5 +16,9 @@ npm install
 
 # Uruchomienie projektu
 echo "Uruchamianie projektu React..."
+
+MY_IP=$(curl -s ifconfig.me)
+export REACT_APP_SERVER=http://127.0.0.1:5000
+
 npm start
 

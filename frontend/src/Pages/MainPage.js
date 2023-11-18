@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { sitemap, analyze } from '../util/request';
+
 
 const MainPage = ({ children }) => {
     return (
