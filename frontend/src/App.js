@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './styles/tailwind.css'
 import MainPage from './Pages/MainPage';
 
 function App() {
