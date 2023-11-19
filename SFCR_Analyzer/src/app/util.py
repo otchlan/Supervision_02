@@ -42,10 +42,34 @@ def search(url):
         ]
 
 
+KEYWORDS = ["Sprawozdanie z badania", 
+"Sprawozdanie niezależnego biegłego rewidenta z badania", 
+"Opinia niezależnego biegłego rewidenta",
+"Sprawozdanie biegłego rewidenta z badania"]
 
+def search_statement(url):
+    with DDGS() as ddgs:
+        try:
+            ret = set(())
+            for keyword in KEYWORDS:
+                res = {
+                    result for result in ddgs.text(
+                        f"\"{keyword}\" site:{url} filetype:pdf", max_results=100
+                    )
+                }
+                ret |= res
+            return ret
+        except:
+            return [
+                result for result in ddgs.text(
+                    f"\"sprawozdanie z badania\" site:{url} filetype:pdf", max_results=100
+                )
+            ]
+        
 def get_file(url):
     response = requests.get(url)
     response.raise_for_status()  
 
-    return response.content  
+    return response.content
 
+print(search_statement("pzu.pl"))
