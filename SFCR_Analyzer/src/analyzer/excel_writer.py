@@ -9,13 +9,16 @@ def write_to_excel(filename, merged_tables):
     excel_path = filename + '-global.xlsx'
     pattern = r'[A-Z][0-9]{4}'
     workbook = load_workbook(excel_path)
+    specific_key = '02.01.02'
+
     print(f'Excel path: {excel_path}')
 
     # Iterate through the rows and cells
-    for sheet_name, merged_table in merged_tables.items():
-        if f'S.{sheet_name}' in workbook.sheetnames and not merged_table.empty:
-            sheet = workbook[f'S.{sheet_name}']
-            print(f'    sheet name: {sheet}')
+    if specific_key in merged_tables and f'S.{specific_key}' in workbook.sheetnames:
+        merged_table = merged_tables[specific_key]
+        if not merged_table.empty:
+            sheet = workbook[f'S.{specific_key}']
+            print(f'Processing sheet: S.{sheet}')
 
             # Iterate through each row in the DataFrame
             for _, row in merged_table.iterrows():
