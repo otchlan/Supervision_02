@@ -29,7 +29,11 @@ const Output = ({company}) => {
     useEffect(getOutput, [company])
 
     const handleOnCheck = (file) => {
-        analyze(file).then(jData => {
+        analyze({
+            company: company,
+            file: file,
+            path: localStorage.setItem('folderPath', "")
+        }).then(jData => {
             console.log(jData)
         })
     }
@@ -38,21 +42,27 @@ const Output = ({company}) => {
 
     return (
         <div className="mt-4">
-            <h2>
-                <FontAwesomeIcon icon={faFile}></FontAwesomeIcon> &nbsp; 
-                Wyniki SFCR dla 
-                <span class="ms-1 font-bold text-yellow-500">
-                {company.name}
+             {output != null && 
+             <> 
+                <h2>
+                    <FontAwesomeIcon icon={faFile}></FontAwesomeIcon> &nbsp; 
+                    Wyniki SFCR dla 
+                    <span class="ms-1 font-bold text-yellow-500">
+                    {company.name}
+                    <span class="inline-flex me-1 items-center justify-center w-4 h-4 ms-2 p-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                        {output.length}
+                    </span>
+                    </span>
+                </h2>
+             
+                <span className="mt-4 divide-y">
+                    <Files items={output} onCheck={(file) => handleOnCheck(file)}></Files>
                 </span>
-            </h2>
-            {output != null &&    
-                <span className="mt-4">
-                    <Files items={output} onCheck={handleOnCheck}></Files>
-                </span>
+                </>
             }
 
             {processing &&
-                <Loading text="Szukam..."></Loading>
+                <Loading text={`Analizuję ${company.name}`}></Loading>
             }
 
             {output !== null && output.length === 0 &&

@@ -30,15 +30,13 @@ export async function companies() {
     })
 }
 
-export async function analyze(url) {
+export async function analyze(data) {
     return fetch(ANALYZE, {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json' 
         },
-        body: JSON.stringify({
-            url: url
-        })
+        body: JSON.stringify(data)
     }).then(response => {
         return response.json()
     })

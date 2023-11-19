@@ -10,8 +10,8 @@ from scrapper.app import find_pdf_links, build_site_map
 @cross_origin()
 def sitemap():
     data = request.json
+    
     url = data.get("url", "")
-
 
     links = search(url)
 #    links = build_site_map(url, url) 
@@ -37,11 +37,13 @@ def companies():
 def analyze():
     data = request.json
     url = data.get('url', '')
+    path = data.get("path", "")
+    company = data.get("company", "")
 
-    content = get_file(url)
+    new_path = get_file(url, path, company)
 
     return jsonify({
-        "Status": "OK"
+        "Path": new_path
     })
 
 

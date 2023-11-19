@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFolder } from '@fortawesome/free-solid-svg-icons';
 
 const FolderPicker = () => {
   const [folderPath, setFolderPath] = useState('');
@@ -11,21 +13,24 @@ const FolderPicker = () => {
   }, []);
 
   const handlePathChange = (e) => {
-    setFolderPath(e.target.value);
-    localStorage.setItem('folderPath', e.target.value);
+    const newPath = e.target.value;
+    setFolderPath(newPath);
+    localStorage.setItem('folderPath', newPath);
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="p-4 max-w-xs mx-auto">
-      <input
+    <div className="flex justify-center items-center w-full divide-y">
+      <div className="p-4 ">
+        <FontAwesomeIcon icon={faFolder}></FontAwesomeIcon> &nbsp; 
+        <span>Podaj ścieżke</span>
+        <input
           type="text"
           value={folderPath}
           onChange={handlePathChange}
-          placeholder="Wklej ścieżkę folderu tutaj"
-          className="block w-full text-sm p-2 border border-gray-300 rounded"
+          placeholder="Wpisz ścieżkę folderu"
+          className="border border-gray-300 rounded py-2 px-4 ml-2 "
         />
-        {folderPath && <p className="mt-2 text-gray-700">Wybrana ścieżka: {folderPath}</p>}
+        {folderPath && <p className="mt-2 text-gray-700 w-full">Wybrana ścieżka: {folderPath}</p>}
       </div>
     </div>
   );
