@@ -6,9 +6,10 @@ import numpy as np
 from openpyxl import load_workbook
 
 def write_to_excel(filename, merged_tables):
+    excel_default = "DEF_BILANS-global.xlsx"
     excel_path = filename + '-global.xlsx'
     pattern = r'[A-Z][0-9]{4}'
-    workbook = load_workbook(excel_path)
+    workbook = load_workbook(excel_default)
     specific_key = '02.01.02'
 
     print(f'Excel path: {excel_path}')
@@ -39,3 +40,4 @@ def write_to_excel(filename, merged_tables):
 
     # Save the workbook
     workbook.save(excel_path)
+    workbook.close()
