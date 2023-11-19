@@ -154,7 +154,7 @@ def compare():
 @cross_origin()
 def compatible():
     data = request.json
-    
+   
     url = data.get("url", "")
 
     return jsonify({
@@ -179,10 +179,8 @@ def companies():
 @cross_origin()
 def analyze():
     logging.debug("Received request for /analyze")
-    data = request.json
-    url = data.get('url', '')
-    path = data.get("path", "")
-    company = data.get("company", "")
+    url = request.json
+
 
     if url:
         logging.info(f"Downloading file from URL: {url}")
