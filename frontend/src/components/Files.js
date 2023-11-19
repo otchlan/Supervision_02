@@ -26,11 +26,11 @@ function extractLastSubpath(url) {
             className="mr-2"
           />
           <FontAwesomeIcon icon={faFilePdf} color="white" className="ps-2"></FontAwesomeIcon>
-          <span key={index} href={item.href} className="ml-2">
+          <span key={index} href={item.href} className="ml-2 truncate text-wrap">
             {extractLastSubpath(item.href)}
           </span>
         </div>
-        <div>
+        <div className="">
         <button onClick={() => onCompatible(item)} className="bg-blue-500 me-1 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
           <FontAwesomeIcon icon={faCog} /> Kompatybilność
         </button>
