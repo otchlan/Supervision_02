@@ -17,6 +17,33 @@ import pandas as pd
 import numpy as np
 from openpyxl import load_workbook
 
+import tarfile
+
+import shutil
+
+def clear_directory(directory_path):
+    """
+    Clear all files and subdirectories in a specified directory.
+
+    Args:
+    directory_path (str): Path of the directory to clear.
+    """
+    for filename in os.listdir(directory_path):
+        file_path = os.path.join(directory_path, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            logging.error(f'Failed to delete {file_path}. Reason: {e}')
+
+def create_archive(source_dir, archive_path):
+    with tarfile.open(archive_path, "w:gz") as tar:
+        tar.add(source_dir, arcname=os.path.basename(source_dir))
+
+    logging.info(f"Archive created at {archive_path}")
+
 def pad_dataframe(dframe, total_columns):
     additional_cols = total_columns - dframe.shape[1]
     empty_cols = pd.DataFrame(np.nan, index=dframe.index, columns=[f'Empty_{z}' for z in range(additional_cols)])
