@@ -7,6 +7,8 @@ services:
       - '3000:3000' 
     depends_on:
       - sfcr_analyzer
+    volumes:
+      - ./backend:/backend 
     environment:
       - WATCHPACK_POLLING=true
       - REACT_APP_SERVER=http://127.0.0.1:5000
@@ -17,6 +19,7 @@ services:
       - "5000:5000"
     volumes:
       - ./SFCR_Analyzer/input:/app/input
+      - ./frontend:/frontend
       - ./SFCR_Analyzer/output:/app/output
     environment:
       - FLASK_APP=app.py

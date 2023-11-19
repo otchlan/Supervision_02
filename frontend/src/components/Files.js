@@ -4,6 +4,7 @@ import { useSprings, animated } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faCodeCompare, faCog } from '@fortawesome/free-solid-svg-icons';
 import BusyDialog from '../dialog/BusyDialog';
+import { compare } from '../util/request';
 
 
 function extractLastSubpath(url) {
@@ -30,12 +31,15 @@ function extractLastSubpath(url) {
           </span>
         </div>
         <button onClick={() => onAnalyze(item)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
+          <FontAwesomeIcon icon={faCog} /> Kompatybilność
+        </button>
+        <button onClick={() => onAnalyze(item)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
           <FontAwesomeIcon icon={faCog} /> Analizuj
         </button>
       </div>
     );
   };
-  
+
 
   const Files = ({ items }) => {
     const [selectedItems, setSelectedItems] = useState([]);
@@ -49,11 +53,12 @@ function extractLastSubpath(url) {
       }
     };
 
-    const handleAnalyze = (item) => {
+    const handleCompare = () => {
         setProcessing(true)
-        setTimeout(() => {
+        compare(selectedItems[0], selectedItems[1]).then(jData => {
+            console.log(jData)
             setProcessing(false)
-        }, 2500)
+        })
     }
   
     const springs = useSprings(
@@ -74,14 +79,13 @@ function extractLastSubpath(url) {
               item={items[index]} 
               index={index} 
               onCheck={handleCheck} 
-              onAnalyze={() => handleAnalyze(items[index])}
               isChecked={selectedItems.includes(items[index])}
             />
           </animated.div>
         ))}
         {selectedItems.length >= 2 &&
             <button 
-                onClick={handleAnalyze}
+                onClick={handleCompare}
                 className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <FontAwesomeIcon icon={faCodeCompare}></FontAwesomeIcon> &nbsp; 
                 Porównaj

@@ -16,7 +16,7 @@ function Companies({ onAnalyze }) {
               'Content-Type': 'application/json' 
             },
         }).then(response => {
-            return response.json();
+            return response.json()
         }).then(jData => {
             setCompanies(jData["companies"]);
         });

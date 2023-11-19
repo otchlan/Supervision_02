@@ -111,6 +111,33 @@ def sitemap():
     return jsonify(data)
 
 
+@app.route('/compare', methods=['POST'])
+@cross_origin()
+def compare():
+    data = request.json
+    
+    url1 = data.get("url1", "")
+    url2 = data.get("url2", "")
+
+    return jsonify({
+        "Status": "OK"
+    })
+
+@app.route('/compatible', methods=['POST'])
+@cross_origin()
+def compatible():
+    data = request.json
+    
+    url = data.get("url", "")
+
+    return jsonify({
+        "Status": "OK"
+    })
+
+
+
+
+
 @app.route('/companies', methods=['GET'])
 @cross_origin()
 def companies():
