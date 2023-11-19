@@ -1,0 +1,77 @@
+Column_0,Column_1,Column_2,Column_3
+,,"Najlepsze oszacowanie i rezerwy
+techniczno-ubezpieczeniowe obliczane
+łącznie netto (tj. po uwzględnieniu
+reasekuracji biernej i spółek celowych
+(podmiotów specjalnego przeznaczenia)","Składki przypisane w okresie ostatnich
+12 miesięcy netto (tj. po uwzględnieniu
+reasekuracji biernej)"
+,,C0020,C0030
+"Ubezpieczenia pokrycia kosztów świadczeń medycznych i
+reasekuracja proporcjonalna",R0020,0,0
+"Ubezpieczenia na wypadek utraty dochodów i
+reasekuracja proporcjonalna",R0030,69 586,314 862
+Ubezpieczenia pracownicze i reasekuracja proporcjonalna,R0040,0,0
+"Ubezpieczenia odpowiedzialności cywilnej z tytułu
+użytkowania pojazdów mechanicznych i reasekuracja
+proporcjonalna",R0050,0,0
+"Pozostałe ubezpieczenia pojazdów i reasekuracja
+proporcjonalna",R0060,0,0
+"Ubezpieczenia morskie, lotnicze i transportowe i
+reasekuracja proporcjonalna",R0070,0,0
+"Ubezpieczenia od ognia i innych szkód rzeczowych i
+reasekuracja proporcjonalna tych ubezpieczeń",R0080,0,0
+"Ubezpieczenia odpowiedzialności cywilnej ogólnej i
+reasekuracja proporcjonalna",R0090,0,0
+"Ubezpieczenia kredytów i poręczeń i reasekuracja
+proporcjonalna",R0100,0,0
+"Ubezpieczenia kosztów ochrony prawnej i reasekuracja
+proporcjonalna",R0110,0,0
+"Ubezpieczenia świadczenia pomocy i reasekuracja
+proporcjonalna",R0120,0,0
+"Ubezpieczenia różnych strat finansowych i reasekuracja
+proporcjonalna",R0130,0,0
+"Reasekuracja nieproporcjonalna ubezpieczeń
+zdrowotnych",R0140,0,8
+"Reasekuracja nieproporcjonalna pozostałych ubezpieczeń
+osobowych",R0150,0,0
+"Reasekuracja nieproporcjonalna ubezpieczeń morskich,
+lotniczych i transportowych",R0160,0,0
+"Reasekuracja nieproporcjonalna ubezpieczeń
+majątkowych",R0170,0,0
+,MCRNL Wynik,R0010,35 880
+,,"Najlepsze oszacowanie i rezerwy
+techniczno-ubezpieczeniowe obliczane
+łącznie netto (tj. po uwzględnieniu
+reasekuracji biernej i spółek celowych
+(podmiotów specjalnego
+przeznaczenia)","Całkowita suma na ryzyku netto (z
+odliczeniem umów reasekuracji i
+spółek celowych (podmiotów
+specjalnego przeznaczenia)"
+,,C0050,C0060
+Zobowiązania z tytułu ubezpieczeń z udziałem w zyskach – świadczenia gwarantowane,R0210,1 831 919,
+Zobowiązania z tytułu ubezpieczeń z udziałem w zyskach – przyszłe świadczenia uznaniowe,R0220,457 836,
+"Zobowiązania z tytułu ubezpieczeń związanych z wartością indeksu i ubezpieczeń z ubezpieczeniowym
+funduszem kapitałowym",R0230,7 865 543,
+Inne zobowiązania z tytułu (reasekuracji) ubezpieczeń na życie i (reasekuracji) ubezpieczeń zdrowotnych,R0240,0,
+"Całkowita suma na ryzyku w odniesieniu do wszystkich zobowiązań z tytułu (reasekuracji) ubezpieczeń na
+życie",R0250,,206 081 351
+"Ogólne obliczenie MCR
+C0070
+Liniowy MCR R0300 279 169
+SCR R0310 1 919 962
+Górny próg MCR R0320 863 983
+Dolny próg MCR R0330 479 991
+Łączny MCR R0340 479 991
+Nieprzekraczalny dolny próg MCR R0350 18 836
+Minimalny wymóg kapitałowy R0400 479 991",,,
+,,C0070,
+Liniowy MCR,R0300,279 169,
+SCR,R0310,1 919 962,
+Górny próg MCR,R0320,863 983,
+Dolny próg MCR,R0330,479 991,
+Łączny MCR,R0340,479 991,
+Nieprzekraczalny dolny próg MCR,R0350,18 836,
+Minimalny wymóg kapitałowy,R0400,479 991,
+,MCRL Wynik,R0200,243 289

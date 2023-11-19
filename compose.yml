@@ -14,7 +14,10 @@ services:
   sfcr_analyzer:
     build: ./SFCR_Analyzer
     ports:
-      - "5000:5000" 
+      - "5000:5000"
+    volumes:
+      - ./SFCR_Analyzer/input:/app/input
+      - ./SFCR_Analyzer/output:/app/output
     environment:
       - FLASK_APP=app.py
       - FLASK_RUN_HOST=0.0.0.0

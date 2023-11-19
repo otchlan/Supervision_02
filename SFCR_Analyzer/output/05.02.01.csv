@@ -1,0 +1,51 @@
+Column_0,Column_1,Column_2,Column_3,Column_4,Column_5,Column_6,Column_7,Column_8
+Brutto – Bezpośrednia działalność ubezpieczeniowa,R0110,324 791,-,-,-,-,-,324 791
+Brutto – reasekuracja czynna proporcjonalna,R0120,-,-,-,-,-,-,-
+Brutto – reasekuracja czynna nieproporcjonalna,R0130,8,-,-,-,-,-,8
+Udział zakładu reasekuracji,R0140,9 930,-,-,-,-,-,9 930
+Netto,R0200,314 869,-,-,-,-,-,314 869
+Składki zarobione,,,,,,,,
+Brutto – Bezpośrednia działalność ubezpieczeniowa,R0210,324 791,-,-,-,-,-,324 791
+Brutto – reasekuracja czynna proporcjonalna,R0220,-,-,-,-,-,-,-
+Brutto – reasekuracja czynna nieproporcjonalna,R0230,8,-,-,-,-,-,8
+Udział zakładu reasekuracji,R0240,9 930,-,-,-,-,-,9 930
+Netto,R0300,314 869,-,-,-,-,-,314 869
+Odszkodowania i świadczenia,,,,,,,,
+Brutto – Bezpośrednia działalność ubezpieczeniowa,R0310,117 735,-,-,-,-,-,117 735
+Brutto – reasekuracja czynna proporcjonalna,R0320,-,-,-,-,-,-,-
+Brutto – reasekuracja czynna nieproporcjonalna,R0330,-,-,-,-,-,-,-
+Udział zakładu reasekuracji,R0340,5 833,-,-,-,-,-,5 833
+Netto,R0400,111 902,-,-,-,-,-,111 902
+Zmiana stanu pozostałych rezerw techniczno-ubezpieczeniowych,,,,,,,,
+Brutto – Bezpośrednia działalność ubezpieczeniowa,R0410,-930,-,-,-,-,-,-930
+Brutto – reasekuracja czynna proporcjonalna,R0420,0,-,-,-,-,-,0
+Brutto – reasekuracja czynna nieproporcjonalna,R0430,0,-,-,-,-,-,0
+Udział zakładu reasekuracji,R0440,-3,-,-,-,-,-,-3
+Netto,R0500,-927,-,-,-,-,-,-927
+Koszty poniesione,R0550,108 567,-,-,-,-,-,108 567
+Pozostałe koszty,R1200,,,,,,,3 192
+Koszty ogółem,R1300,,,,,,,111 760
+,,C0010,C0020,C0030,C0040,C0050,C0060,C0070
+,R0010,,,,,,,
+,,C0080,C0090,C0100,C0110,C0120,C0130,C0140
+Brutto,R1410,2 215 995,,,,,,2 215 995
+Udział zakładu reasekuracji,R1420,52 510,,,,,,52 510
+Netto,R1500,2 163 485,,,,,,2 163 485
+Składki zarobione,,,,,,,,
+Brutto,R1510,2 217 061,,,,,,2 217 061
+Udział zakładu reasekuracji,R1520,52 483,,,,,,52 483
+Netto,R1600,2 164 578,,,,,,2 164 578
+Odszkodowania i świadczenia,,,,,,,,
+Brutto,R1610,1 970 521,,,,,,1 970 521
+Udział zakładu reasekuracji,R1620,26 499,,,,,,26 499
+Netto,R1700,1 944 022,,,,,,1 944 022
+Zmiana stanu pozostałych rezerw techniczno-ubezpieczeniowych,,,,,,,,
+Brutto,R1710,2 197 454,,,,,,2 197 454
+Udział zakładu reasekuracji,R1720,-76,,,,,,-76
+Netto,R1800,2 197 530,,,,,,2 197 530
+Koszty poniesione,R1900,536 946,,,,,,536 946
+Pozostałe koszty,R2500,,,,,,,5 975
+Koszty ogółem,R2600,,,,,,,542 921
+,,C0150,C0160,C0170,C0180,C0190,C0200,C0210
+,R1400,,,,,,,
+,,C0220,C0230,C0240,C0250,C0260,C0270,C0280

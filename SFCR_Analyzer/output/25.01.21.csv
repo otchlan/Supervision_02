@@ -1,0 +1,68 @@
+Column_0,Column_1,Column_2,Column_3,Column_4
+,,"Kapitałowy wymóg
+wypłacalności brutto","Parametry specyficzne dla
+zakładu",Uproszczenia
+,,C0110,C0090,C0120
+Ryzyko rynkowe,R0010,887 890,,0
+Ryzyko niewykonania zobowiązania przez kontrahenta,R0020,46 112,,
+Ryzyko aktuarialne w ubezpieczeniach na życie,R0030,1 574 362,0,0
+Ryzyko aktuarialne w ubezpieczeniach zdrowotnych,R0040,565 411,0,0
+Ryzyko aktuarialne w ubezpieczeniach innych niż ubezpieczenia na życie,R0050,0,0,0
+Dywersyfikacja,R0060,-825 751,,
+Ryzyko z tytułu wartości niematerialnych i prawnych,R0070,0,,
+Podstawowy kapitałowy wymóg wypłacalności,R0100,2 248 023,,
+"Obliczanie kapitałowego wymogu wypłacalności C0100
+Korekta w wyniku agregacji RFF/MAP nSCR R0120 0
+Ryzyko operacyjne R0130 87 523
+Zdolność rezerw techniczno-ubezpieczeniowych do pokrywania strat R0140 -2 183
+Zdolności odroczonych podatków dochodowych do pokrywania strat R0150 -413 400
+Wymóg kapitałowy dla działalności prowadzonej zgodnie z art. 4 dyrektywy 2003/41/WE R0160 0
+Kapitałowy wymóg wypłacalności z wyłączeniem wymogu kapitałowego R0200 1 919 962
+Ustanowione wymogi kapitałowe R0210 0
+Kapitałowy wymóg wypłacalności R0220 1 919 962
+Inne informacje na temat SCR
+Wymóg kapitałowy dla podmodułu ryzyka cen akcji opartego na duracji R0400 0
+Łączna kwota hipotetycznego kapitałowego wymogu wypłacalności dla pozostałej części R0410 0
+Łączna wartość hipotetycznego kapitałowego wymogu wypłacalności dla funduszy wyodrębnionych R0420 0
+Łączna kwota hipotetycznego kapitałowego wymogu wypłacalności dla portfeli objętych korektą R0430 0
+dopasowującą
+Efekt dywersyfikacji ze względu na agregację nSCR dla RFF na podstawie art. 304 R0440 0
+Tak/Nie
+Podejście do stawki podatkowej C0109
+Podejście oparte na średniej stawce podatkowej R0590 2 – Nie
+LAC DT / LAC DT
+Obliczanie korekty z tytułu zdolności odroczonych podatków dochodowych do pokrywania C0130
+strat
+LAC DT R0640 -413 400
+LAC DT uzasadniona odwróceniem ujęcia zobowiązań z tytułu odroczonego podatku dochodowego R0650 -413 400
+LAC DT uzasadniona odniesieniem do możliwego przyszłego zysku ekonomicznego podlegającego R0660 0
+opodatkowaniu
+LAC DT uzasadniona przeniesieniem strat na wcześniejsze okresy, bieżący rok R0670 0
+LAC DT uzasadniona przeniesieniem na wcześniejsze okresy, przyszłe lata R0680 0
+Maksymalny LAC DT R0690 -745 967",,,,
+,,LAC DT / LAC DT,,
+,,C0130,,
+LAC DT,R0640,-413 400,,
+LAC DT uzasadniona odwróceniem ujęcia zobowiązań z tytułu odroczonego podatku dochodowego,R0650,-413 400,,
+"LAC DT uzasadniona odniesieniem do możliwego przyszłego zysku ekonomicznego podlegającego
+opodatkowaniu",R0660,0,,
+"LAC DT uzasadniona przeniesieniem strat na wcześniejsze okresy, bieżący rok",R0670,0,,
+"LAC DT uzasadniona przeniesieniem na wcześniejsze okresy, przyszłe lata",R0680,0,,
+Maksymalny LAC DT,R0690,-745 967,,
+,Korekta w wyniku agregacji RFF/MAP nSCR,R0120,0,
+,Ryzyko operacyjne,R0130,87 523,
+,Zdolność rezerw techniczno-ubezpieczeniowych do pokrywania strat,R0140,-2 183,
+,Zdolności odroczonych podatków dochodowych do pokrywania strat,R0150,-413 400,
+,Wymóg kapitałowy dla działalności prowadzonej zgodnie z art. 4 dyrektywy 2003/41/WE,R0160,0,
+,Kapitałowy wymóg wypłacalności z wyłączeniem wymogu kapitałowego,R0200,1 919 962,
+,Ustanowione wymogi kapitałowe,R0210,0,
+,Kapitałowy wymóg wypłacalności,R0220,1 919 962,
+,Inne informacje na temat SCR,,,
+,Wymóg kapitałowy dla podmodułu ryzyka cen akcji opartego na duracji,R0400,0,
+,Łączna kwota hipotetycznego kapitałowego wymogu wypłacalności dla pozostałej części,R0410,0,
+,Łączna wartość hipotetycznego kapitałowego wymogu wypłacalności dla funduszy wyodrębnionych,R0420,0,
+,"Łączna kwota hipotetycznego kapitałowego wymogu wypłacalności dla portfeli objętych korektą
+dopasowującą",R0430,0,
+,Efekt dywersyfikacji ze względu na agregację nSCR dla RFF na podstawie art. 304,R0440,0,
+,,,,C0109
+,,Podejście oparte na średniej stawce podatkowej,R0590,2 – Nie

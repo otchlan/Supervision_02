@@ -2,6 +2,8 @@ import os
 import pdfplumber
 import pandas as pd
 import numpy as np
+from openpyxl import load_workbook
+from excel_writer import write_to_excel
 
 
 def pad_dataframe(dframe, total_columns):
@@ -16,18 +18,19 @@ def print_table(search_text, merged_tables):
     else:
         print(f"No table found for {search_text}.")
 
-current_dir = os.path.dirname(__file__)  # Gets the directory where the script is located
-src_dir = os.path.dirname(current_dir)  # Moves up to the 'src' directory
-project_dir = os.path.dirname(src_dir)  # Moves up to the main project directory
-file_path = os.path.join(project_dir, 'docs', 'ALLIANZ 2022.pdf')
 
-#file_path = "c:/supervision_source/strona_air.pdf"  # Replace with your file path
-tables = []
+file_name = 'UNIQA 2021'
+file_extension = 'pdf'
+
+# Assuming that the file_path is correctly pointing to the file in the 'docs' directory
+file_path = os.path.join('/app', 'docs', f'{file_name}.{file_extension}')
+
 tables_dict = {}
 tableNumber = 0
 pageNumber = 0
-tables_set = ['02.01.02', '05.01.02', '05.01.02.01', '05.01.02.02', '05.02.01', '05.02.01.01', '05.02.01.02',
-              '05.02.01.03', '05.02.01.04', '05.02.01.05', '05.02.01.06',
+tables_set = ['02.01.02',
+              '05.01.02', '05.01.02.01', '05.01.02.02',
+              '05.02.01', '05.02.01.01', '05.02.01.02', '05.02.01.03', '05.02.01.04', '05.02.01.05', '05.02.01.06',
               '12.01.02', '12.01.02.01',
               '17.01.02', '17.01.02.01',
               '19.01.21', '19.01.21.01', '19.01.21.02', '19.01.21.03', '19.01.21.04',
@@ -37,7 +40,7 @@ tables_set = ['02.01.02', '05.01.02', '05.01.02.01', '05.01.02.02', '05.02.01', 
               '25.02.21', '25.02.21.01', '25.02.21.02', '25.02.21.03', '25.02.21.04', '25.02.21.05',
               '25.03.21', '25.03.21.01', '25.03.21.02', '25.03.21.03', '25.03.21.04', '25.03.21.05',
               '28.01.01', '28.01.01.01', '28.01.01.02', '28.01.01.03', '28.01.01.04', '28.01.01.05',
-              '28.02.01', '28.02.01.01', '28.02.01.02', '28.02.01.03', '28.02.01.04', '28.02.01.05'
+              '28.02.01', '28.02.01.01', '28.02.01.02', '28.02.01.03', '28.02.01.04', '28.02.01.05',
               ]
 
 table_settings = {
@@ -89,23 +92,22 @@ for search_text, table_list in tables_dict.items():
 
 print(f"Total tables extracted: {tableNumber}")
 
+for search_text, merged_table in merged_tables_dict.items():
+    if not merged_table.empty:
+        output_csv_filename = os.path.join('/app', 'output', f"{file_name}-{search_text}.csv")
+        merged_table.to_csv(output_csv_filename, index=False)
+        print(f"Saved table for '{search_text}' as '{output_csv_filename}'")
+    else:
+        print(f"No table to save for '{search_text}' (empty table).")
+
+
 # Example to print tables for a specific search_text
 specific_search_text = '02.01.02'  # For example
 print_table(specific_search_text, merged_tables_dict)
 
-specific_search_text = '12.01.02'  # For example
-print_table(specific_search_text, merged_tables_dict)
+# Writing to excel file
+#print('Writing to Excel')
+#write_to_excel(file_name, merged_tables_dict)
 
-specific_search_text = '23.01.01'  # For example
-print_table(specific_search_text, merged_tables_dict)
 
-for search_text, merged_table in merged_tables_dict.items():
-    # Check if the merged table is not empty
-    if not merged_table.empty:
-        # Define the filename using the search_text key
-        filename = f"{search_text}.csv"
-        # Save the merged table (DataFrame) as a CSV file
-        merged_table.to_csv(filename, index=False)
-        print(f"Saved table for '{search_text}' as '{filename}'")
-    else:
-        print(f"No table to save for '{search_text}' (empty table).")
+
