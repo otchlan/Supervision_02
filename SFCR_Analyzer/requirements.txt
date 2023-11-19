@@ -27,3 +27,4 @@ socksio==1.0.0
 soupsieve==2.5
 urllib3==2.1.0
 Werkzeug==3.0.1
+pdfplumber

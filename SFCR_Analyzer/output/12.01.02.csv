@@ -1,0 +1,97 @@
+Column_0,Column_1,Column_2,Column_3,Column_4,Column_5,Column_6,Column_7,Column_8,Column_9,Column_10,Column_11
+,,"Ubezpieczenia z
+udziałem w
+zyskach","Ubezpieczenia, w których świadczenie jest ustalane w oparciu
+o określone indeksy lub inne wartości bazowe i ubezpieczenia
+związane z ubezpieczeniowym funduszem kapitałowym
+Umowy bez opcji i Umowy z opcjami i
+gwarancji gwarancjami",,,"Pozostałe ubezpieczenia na życie
+Umowy bez opcji i Umowy z opcjami i
+gwarancji gwarancjami",,,"Renty z umów ubezpieczenia
+innych niż umowy ubezpieczenia
+na życie oraz powiązane ze
+zobowiązaniami
+ubezpieczeniowymi innymi niż
+zobowiązania z tytułu ubezpieczeń
+zdrowotnych","Przejęta
+reasekuracja","Ogółem (Ubezpieczenia na
+życie inne niż zdrowotne, w
+tym ubezpieczenia na życie
+związane z ubezpieczeniowym
+funduszem kapitałowym)"
+,,,,"Umowy bez opcji i
+gwarancji","Umowy z opcjami i
+gwarancjami",,"Umowy bez opcji i
+gwarancji","Umowy z opcjami i
+gwarancjami",,,
+,,C0020,C0030,C0040,C0050,C0060,C0070,C0080,C0090,C0100,C0150
+Rezerwy techniczno-ubezpieczeniowe obliczane łącznie,R0010,0,0,,,0,,,0,0,0
+"Kwoty należne z umów reasekuracji i od spółek celowych (podmiotów specjalnego
+przeznaczenia) oraz reasekuracji finansowej, po dokonaniu korekty ze względu na
+oczekiwane straty w związku z niewykonaniem zobowiązania przez kontrahenta,
+związane z rezerwami techniczno-ubezpieczeniowymi obliczanymi łącznie – Ogółem",R0020,0,0,,,0,,,0,0,0
+"Rezerwy techniczno-ubezpieczeniowe obliczane jako suma najlepszego
+oszacowania i marginesu ryzyka",,,,,,,,,,,
+Najlepsze oszacowanie,,,,,,,,,,,
+Najlepsze oszacowanie brutto,R0030,2 287 377,,7 637 189,220 968,,-345 370,117 483,0,0,9 918
+"Kwoty należne z umów reasekuracji i od spółek celowych (podmiotów specjalnego
+przeznaczenia) oraz reasekuracji finansowej po dokonaniu korekty ze względu na
+oczekiwane straty w związku z niewykonaniem zobowiązania przez kontrahenta –
+Ogółem",R0080,-2 378,,-7 139,-247,,-13 696,0,0,0,-23
+"Najlepsze oszacowanie pomniejszone o kwoty należne z umów reasekuracji i od spółek
+celowych (podmiotów specjalnego przeznaczenia) oraz z reasekuracji finansowej -
+Ogółem",R0090,2 289 755,,7 644 328,221 215,,-331 674,117 483,0,0,9 941
+Margines ryzyka,R0100,99 954,341 364,,,99 249,,,0,0,541
+"Kwota wynikająca z zastosowania przepisów przejściowych dotyczących rezerw
+techniczno-ubezpieczeniowych",,,,,,,,,,,
+Rezerwy techniczno-ubezpieczeniowe obliczane łącznie,R0110,0,0,,,0,0,0,0,0,0
+Najlepsze oszacowanie,R0120,0,,0,0,,0,0,0,0,0
+Margines ryzyka,R0130,0,0,,,0,,,0,0,0
+Rezerwy techniczno-ubezpieczeniowe – ogółem,R0200,2 387 331,8 200,,,-128 638,,,0,0,10 458
+"Ubezpieczenia zdrowotne (bezpośrednia działalność
+ubezpieczeniowa) Renty z umów
+U gm woo apw rc ay j ni b i c e jiz Um go ww ay r az no cp jac mjam ii i zu ou b bb oe oe rz wz ap up z iin ą be i pe i zc eżc o a z zuz w ne pe m in ii an eąio ma ci za w a zn i en i y zn a ńe n t ż yzy y e tc c u h i łe u (R zu rd ee b r aa ce o ss zz w ee yp k nk oie uu ntnc rr aaa z y )e cc cń jj h aa u(U bz cb ed he zO r ao pz żg rp yw ia eó ci koe cł ie t etc zenm )ez ree ńz n e o ni a a
+zdrowotnych
+C0160 C0170 C0180 C0190 C0200 C0210
+Rezerwy techniczno-ubezpieczeniowe obliczane łącznie R0010 0 0 0 0
+Kwoty należne z umów reasekuracji i od spółek celowych (podmiotów specjalnego
+przeznaczenia) oraz reasekuracji finansowej, po dokonaniu korekty ze względu na R0020
+oczekiwane straty w związku z niewykonaniem zobowiązania przez kontrahenta,
+związane z rezerwami techniczno-ubezpieczeniowymi obliczanymi łącznie – Ogółem 0 0 0 0
+Rezerwy techniczno-ubezpieczeniowe obliczane jako suma najlepszego
+oszacowania i marginesu ryzyka RM
+Najlepsze oszacowanie
+Najlepsze oszacowanie brutto R0030 -919 139 0 0 0 -919 139
+Kwoty należne z umów reasekuracji i od spółek celowych (podmiotów specjalnego
+przeznaczenia) oraz reasekuracji finansowej po dokonaniu korekty ze względu na R0080 -11 802 0 0 0 -11 802
+oczekiwane straty w związku z niewykonaniem zobowiązania przez kontrahenta –
+Ogółem
+Najlepsze oszacowanie pomniejszone o kwoty należne z umów reasekuracji i od spółek
+celowych (podmiotów specjalnego przeznaczenia) oraz z reasekuracji finansowej – R0090 -907 337 0 0 0 -907 337
+Ogółem
+Margines ryzyka R0100 158 425 0 0 158 425
+Kwota wynikająca z zastosowania przepisów przejściowych dotyczących rezerw
+techniczno-ubezpieczeniowych
+Rezerwy techniczno-ubezpieczeniowe obliczane łącznie R0110 0 0 0 0
+Najlepsze oszacowanie R0120 0 0 0 0 0
+Margines ryzyka R0130 0 0 0 0
+Rezerwy techniczno-ubezpieczeniowe – ogółem R0200 -760 714 0 0 -760 714",,,,,,,,,,,
+Rezerwy techniczno-ubezpieczeniowe obliczane łącznie,R0110,0,,,0,0,0,,,,
+Najlepsze oszacowanie,R0120,,0,0,0,0,0,,,,
+Margines ryzyka,R0130,0,,,0,0,0,,,,
+Rezerwy techniczno-ubezpieczeniowe – ogółem,R0200,-760 714,,,0,0,-760 714,,,,
+,,,,,,,"Umowy bez
+opcji i
+gwarancji","Umowy z opcjami i
+gwarancjami",,,
+,,,,,,C0160,C0170,C0180,C0190,C0200,C0210
+,,,,Rezerwy techniczno-ubezpieczeniowe obliczane łącznie,R0010,0,,,0,0,0
+,,,,,R0020,0,,,0,0,0
+,,,,"Kwoty należne z umów reasekuracji i od spółek celowych (podmiotów specjalnego
+przeznaczenia) oraz reasekuracji finansowej po dokonaniu korekty ze względu na
+oczekiwane straty w związku z niewykonaniem zobowiązania przez kontrahenta –
+Ogółem",R0080,,-11 802,0,0,0,-11 802
+,,,,"Najlepsze oszacowanie pomniejszone o kwoty należne z umów reasekuracji i od spółek
+celowych (podmiotów specjalnego przeznaczenia) oraz z reasekuracji finansowej –
+Ogółem",R0090,,-907 337,0,0,0,-907 337
+,,,,,,158 425,,,0,0,158 425
