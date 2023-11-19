@@ -125,8 +125,8 @@ def process_pdf(file_name):
 @cross_origin()
 def sitemap():
     data = request.json
+    
     url = data.get("url", "")
-
 
     links = search(url)
 #    links = build_site_map(url, url) 
@@ -136,6 +136,33 @@ def sitemap():
     }
 
     return jsonify(data)
+
+
+@app.route('/compare', methods=['POST'])
+@cross_origin()
+def compare():
+    data = request.json
+    
+    url1 = data.get("url1", "")
+    url2 = data.get("url2", "")
+
+    return jsonify({
+        "Status": "OK"
+    })
+
+@app.route('/compatible', methods=['POST'])
+@cross_origin()
+def compatible():
+    data = request.json
+   
+    url = data.get("url", "")
+
+    return jsonify({
+        "Status": "OK"
+    })
+
+
+
 
 
 @app.route('/companies', methods=['GET'])
@@ -152,8 +179,8 @@ def companies():
 @cross_origin()
 def analyze():
     logging.debug("Received request for /analyze")
-    data = request.json
-    url = data.get('url', '')
+    url = request.json
+
 
     if url:
         logging.info(f"Downloading file from URL: {url}")

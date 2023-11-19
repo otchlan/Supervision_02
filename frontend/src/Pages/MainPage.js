@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
-import { sitemap, analyze } from '../util/request';
 import Companies from '../components/Companies';
 import Output from '../components/Output';
-import Loading from '../components/Loading';
-import Path from '../components/Path';
 
 
 const MainPage = ({ children }) => {
-    let [company, setCompany] = useState(null)
+    let [companies, setCompanies] = useState([])
 
-    const handleOnCompany = (company) => [
-        setCompany(company)
+    const handleOnAnalyze = (companies) => [
+        setCompanies(companies)
     ]
-  
+ 
     return (
         <div className=" w-full h-full  mx-auto p-4">
-            < h1 className="text-3xl font-bold underline">
-                SFCR Lighter
-            </h1>            
-            <Companies onCompany={handleOnCompany}></Companies>
-            <Output company={company} ></Output>
+            <h1 className="pb-2 pt-2 text-4xl font-bold text-bg rounded shadow-xl">SFCR Lighter</h1>   
+            <Companies onAnalyze={handleOnAnalyze}></Companies>
+
+            {companies.map(company =>
+                    <Output company={company} ></Output>
+                )
+            }
         </div>
     );
 }
