@@ -4,7 +4,7 @@ import { useSprings, animated } from 'react-spring';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf, faCodeCompare, faCog } from '@fortawesome/free-solid-svg-icons';
 import BusyDialog from '../dialog/BusyDialog';
-import { compare } from '../util/request';
+import { analyze, compare, compatible } from '../util/request';
 
 
 function extractLastSubpath(url) {
@@ -15,7 +15,7 @@ function extractLastSubpath(url) {
     return parts[parts.length - 1];
   }
   
-  const File = ({ item, index, onCheck, onAnalyze, isChecked }) => {
+  const File = ({ item, index, onCheck, onCompatible, onAnalyze, isChecked }) => {
     return (
       <div className={`relative flex items-center justify-between p-2 w-full rounded ${isChecked ? 'bg-blue-100' : ''}`}>
         <div className="flex items-center">
@@ -30,12 +30,15 @@ function extractLastSubpath(url) {
             {extractLastSubpath(item.href)}
           </span>
         </div>
-        <button onClick={() => onAnalyze(item)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
+        <div>
+        <button onClick={() => onCompatible(item)} className="bg-blue-500 me-1 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
           <FontAwesomeIcon icon={faCog} /> Kompatybilność
         </button>
         <button onClick={() => onAnalyze(item)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
           <FontAwesomeIcon icon={faCog} /> Analizuj
         </button>
+        </div>
+        
       </div>
     );
   };
@@ -55,11 +58,28 @@ function extractLastSubpath(url) {
 
     const handleCompare = () => {
         setProcessing(true)
+
         compare(selectedItems[0], selectedItems[1]).then(jData => {
-            console.log(jData)
             setProcessing(false)
         })
     }
+
+    const handleOnAnalyze = (item) => {
+        setProcessing(true)
+
+        analyze(item.href).then(jData => {
+            setProcessing(false)
+        })
+    }
+
+    const handleOnCompatible = (item) => {
+        setProcessing(true)
+
+        compatible(item.href).then(jData => {
+            setProcessing(false)
+        })
+    }
+
   
     const springs = useSprings(
       items.length,
@@ -79,6 +99,8 @@ function extractLastSubpath(url) {
               item={items[index]} 
               index={index} 
               onCheck={handleCheck} 
+              onAnalyze={handleOnAnalyze}
+              onCompatible={handleOnCompatible}
               isChecked={selectedItems.includes(items[index])}
             />
           </animated.div>
