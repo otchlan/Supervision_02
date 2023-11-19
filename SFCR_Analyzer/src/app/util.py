@@ -49,23 +49,19 @@ KEYWORDS = ["Sprawozdanie z badania",
 
 
 def search_statement(url):
+    ret = []
     with DDGS() as ddgs:
-        try:
-            ret = set(())
-            for keyword in KEYWORDS:
-                res = {
-                    result for result in ddgs.text(
-                        f"\"{keyword}\" site:{url} filetype:pdf", max_results=100
-                    )
-                }
-                ret |= res
-            return ret
-        except:
-            return [
+        for keyword in KEYWORDS:
+            tmp = [
                 result for result in ddgs.text(
-                    f"\"sprawozdanie z badania\" site:{url} filetype:pdf", max_results=100
+                    f"\"{keyword}\" site:{url} filetype:pdf", max_results=100
                 )
             ]
+            for i in tmp:
+                if i not in ret:
+                    ret.append(i)
+    return ret
+        
         
 def get_file(url, path, company):
         response = requests.get(url)
@@ -78,5 +74,4 @@ def get_file(url, path, company):
     
         return new_path
 
-
-print(search_statement("pzu.pl"))
+print(search_statement("nn.pl"))
