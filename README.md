@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.com/username/repo_name.svg?branch=master)](https://travis-ci.com/username/repo_name)
-
-
 # Supervision_hack 3 - SF_CRacker
 
 ## Rozruch:
