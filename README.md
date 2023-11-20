@@ -1,29 +1,31 @@
-Supervision_hack 3 -> task 02: #SF_CRacker
+# Supervision_hack 3 - SF_CRacker
 
-# Rozruch:
+## Rozruch:
+Uruchomienie aplikacji za pomocą Docker:
+```
 docker-compose up -d --build
+```
 
-po odpaleniu się docker'a wejść na
-http://localhost:3000/
+## Interfejs:
+Po uruchomieniu Docker'a aplikacja dostępna jest pod adresem:
+[http://localhost:3000/](http://localhost:3000/)
 
-Frontend aplikacji odzielony jest od backendu aplikacji
-Cała logika FE znajduje się w folderze: **frontend**
-Funkcjonalności aplikacji
-Funkcjonalności
+## Architektura aplikacji:
+- **Frontend**: Znajduje się w folderze `frontend`. Zawiera całą logikę interfejsu użytkownika.
+- **Backend**: Znajduje się w folderze `SFCR_Analyzer`. Zawiera logikę przetwarzania danych.
 
-- Szybkie wyszukiwanie plików PDF dzięki silnikowi duckduckgo
-- Wycąganie tabel z PDFów i zapisywanie ich w postaci CVS
-- Sprawdzanie zawartości sprawozdania na podstawie Załącznika nr. 2
-- Przygotowana lista aktualnych zakładów
-- Przygotowane tabele pod porównywanie poprzednich lat
-- Wyciąganie z PDFów obrazów tabeli i przygotowanie takowych danych do uczenia maszynowego (wykorzystujemy nową bibloteke img2table)
-- Cała logika BE znajduje się w folderze: **SFCR_Analyzer**
+## Funkcjonalności:
+- **Wyszukiwanie plików PDF**: Wykorzystuje silnik DuckDuckGo do szybkiego wyszukiwania plików PDF.
+- **Eksport tabel z PDF do CSV**: Wyciąganie tabel z dokumentów PDF i zapisywanie ich jako pliki CSV.
+- **Sprawdzanie zawartości sprawozdań**: Porównywanie zawartości sprawozdań na podstawie Załącznika nr 2.
+- **Lista zakładów**: Przygotowana lista aktualnych zakładów ubezpieczeń.
+- **Porównanie tabel rocznych**: Tabele przygotowane do porównywania danych z różnych lat.
+- **Eksport obrazów tabel do uczenia maszynowego**: Wykorzystanie biblioteki img2table do przetwarzania obrazów tabel na dane do uczenia maszynowego.
 
-Narzędzia do przetwarzania plików znajdują się w folderze **src**
-Wewnątrz tego folderu znajdują się foldery:
-**analyzer** który zawiera pliki
-- pdfanalyze2.py - plik zawiera kod który wyciąga główne tabele ze sprawozdań i zapisuje je w formacie .csv
-- excel_writer.py - towrzy na podstawie plików .csv arkusz kalkulacyjny który można potem wykorzystać do analizy zprawozdań rok do roku
-- DEF_BILANS-global.xlsx - szablon z którego wychodzi każda tabela bilansowa
-**parser** który zawiera:
-- app.py - plik wyciąga strukturę do sprawdzenia z "Załączkik nr 2{...}.docx", następnie pobiera kilka pierwszych stron z .pdf i porównuje, czy zgadza się.
+## Narzędzia:
+- **Analizator (analyzer)**:
+  - `pdfanalyze2.py`: Wyciąga główne tabele ze sprawozdań i zapisuje je w formacie CSV.
+  - `excel_writer.py`: Tworzy arkusze kalkulacyjne na podstawie plików CSV dla analizy rok do roku.
+  - `DEF_BILANS-global.xlsx`: Szablon do generowania tabel bilansowych.
+- **Parser (parser)**:
+  - `app.py`: Wyciąga strukturę do sprawdzenia z dokumentu "Załącznik nr 2{...}.docx", następnie porównuje ją z pierwszymi stronami dokumentów PDF.
