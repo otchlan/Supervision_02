@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.8"
+# Komendy do instalacji zależności
+install:
+  - pip install -r requirements.txt
+# Komendy do uruchamiania testów
+script:
+  - pytest
